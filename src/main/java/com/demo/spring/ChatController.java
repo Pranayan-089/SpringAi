@@ -15,8 +15,8 @@ public class ChatController {
 	}
 	
 	@GetMapping("/chat/{ques}")
-	public String getResponse(@PathVariable String ques) {
-		String response=chatClient.prompt(ques).call().content();
+	public String getResponse(@PathVariable String q) {
+		String response=chatClient.prompt(q).call().content();
 		return response;
 	}
 	
